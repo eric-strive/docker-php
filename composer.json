@@ -1,14 +1,14 @@
 {
-    "name": "docker/php",
-    "description": "docker-compose-php",
-    "type": "project",
-    "license": "MIT",
-    "authors": [
-        {
-            "name": "wangwei2",
-            "email": "wangwei2@kuainiugroup.com"
-        }
-    ],
-    "minimum-stability": "dev",
-    "require": {}
+  "name": "docker/php",
+  "description": "docker-compose-php",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "wangwei2",
+      "email": "wangwei2@kuainiugroup.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {}
 }
