@@ -1,0 +1,17 @@
+2018/12/02 12:09:29 [emerg] 1#1: "user" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
+2018/12/02 12:10:22 [emerg] 1#1: "user" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
+2018/12/02 12:10:48 [emerg] 1#1: "user" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
+2018/12/02 12:11:05 [emerg] 1#1: "user" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
+2018/12/02 12:13:00 [emerg] 1#1: "user" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
+2018/12/02 12:22:28 [emerg] 1#1: "worker_processes" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
+2018/12/02 12:23:00 [emerg] 1#1: "worker_processes" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
+2018/12/02 12:23:31 [emerg] 1#1: "worker_processes" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
+2018/12/02 12:23:48 [emerg] 1#1: "pid" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:2
+2018/12/02 12:24:07 [emerg] 1#1: "events" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:5
+2018/12/02 12:55:17 [emerg] 1#1: "http" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
+2018/12/02 12:56:31 [emerg] 1#1: "http" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
+2018/12/02 12:57:03 [emerg] 1#1: "http" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
+2018/12/02 12:58:29 [emerg] 1#1: "root" directive is duplicate in /etc/nginx/sites-available/nginx.conf:10
+2018/12/02 12:59:20 [emerg] 1#1: host not found in upstream "work-php-fpm" in /etc/nginx/sites-available/nginx.conf:58
+2018/12/02 12:59:23 [emerg] 1#1: host not found in upstream "work-php-fpm" in /etc/nginx/sites-available/nginx.conf:58
+2018/12/02 13:01:02 [emerg] 1#1: invalid number of arguments in "root" directive in /etc/nginx/sites-available/nginx.conf:5
