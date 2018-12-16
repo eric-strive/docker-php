@@ -13,5 +13,11 @@
   "require": {},
   "config": {
     "process-timeout": 1800
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
   }
 }
