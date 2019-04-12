@@ -1,0 +1,23 @@
+{
+  "name": "docker/php",
+  "description": "docker-compose-php",
+  "type": "project",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "wangwei2",
+      "email": "wangwei2@kuainiugroup.com"
+    }
+  ],
+  "minimum-stability": "dev",
+  "require": {},
+  "config": {
+    "process-timeout": 1800
+  },
+  "repositories": {
+    "packagist": {
+      "type": "composer",
+      "url": "https://packagist.phpcomposer.com"
+    }
+  }
+}
