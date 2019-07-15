@@ -1,17 +1,55 @@
-2018/12/02 12:09:29 [emerg] 1#1: "user" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
-2018/12/02 12:10:22 [emerg] 1#1: "user" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
-2018/12/02 12:10:48 [emerg] 1#1: "user" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
-2018/12/02 12:11:05 [emerg] 1#1: "user" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
-2018/12/02 12:13:00 [emerg] 1#1: "user" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
-2018/12/02 12:22:28 [emerg] 1#1: "worker_processes" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
-2018/12/02 12:23:00 [emerg] 1#1: "worker_processes" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
-2018/12/02 12:23:31 [emerg] 1#1: "worker_processes" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
-2018/12/02 12:23:48 [emerg] 1#1: "pid" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:2
-2018/12/02 12:24:07 [emerg] 1#1: "events" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:5
-2018/12/02 12:55:17 [emerg] 1#1: "http" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
-2018/12/02 12:56:31 [emerg] 1#1: "http" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
-2018/12/02 12:57:03 [emerg] 1#1: "http" directive is not allowed here in /etc/nginx/sites-available/nginx.conf:1
-2018/12/02 12:58:29 [emerg] 1#1: "root" directive is duplicate in /etc/nginx/sites-available/nginx.conf:10
-2018/12/02 12:59:20 [emerg] 1#1: host not found in upstream "work-php-fpm" in /etc/nginx/sites-available/nginx.conf:58
-2018/12/02 12:59:23 [emerg] 1#1: host not found in upstream "work-php-fpm" in /etc/nginx/sites-available/nginx.conf:58
-2018/12/02 13:01:02 [emerg] 1#1: invalid number of arguments in "root" directive in /etc/nginx/sites-available/nginx.conf:5
+2019/07/14 14:11:50 [error] 11#11: *2 open() "/index.html" failed (2: No such file or directory), client: 172.22.0.1, server: localhost, request: "GET /index.html HTTP/1.1", host: "127.0.0.1"
+2019/07/14 14:13:16 [error] 6#6: *2 open() "/index.html" failed (2: No such file or directory), client: 172.22.0.1, server: localhost, request: "GET /index.html HTTP/1.1", host: "127.0.0.1"
+2019/07/14 14:13:24 [error] 6#6: *2 directory index of "/" is forbidden, client: 172.22.0.1, server: localhost, request: "GET / HTTP/1.1", host: "127.0.0.1"
+2019/07/14 14:13:43 [error] 6#6: *3 directory index of "/" is forbidden, client: 172.22.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2019/07/14 14:14:32 [error] 6#6: *1 directory index of "/" is forbidden, client: 172.22.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2019/07/14 14:14:46 [error] 6#6: *1 open() "/index.html" failed (2: No such file or directory), client: 172.22.0.1, server: localhost, request: "GET /index.html HTTP/1.1", host: "localhost"
+2019/07/14 14:15:47 [error] 6#6: *1 open() "/index.html" failed (2: No such file or directory), client: 172.22.0.1, server: localhost, request: "GET /index.html HTTP/1.1", host: "localhost"
+2019/07/14 14:15:48 [error] 6#6: *1 open() "/index.html" failed (2: No such file or directory), client: 172.22.0.1, server: localhost, request: "GET /index.html HTTP/1.1", host: "localhost"
+2019/07/14 14:15:53 [error] 6#6: *1 directory index of "/" is forbidden, client: 172.22.0.1, server: localhost, request: "GET / HTTP/1.1", host: "localhost"
+2019/07/14 14:23:53 [error] 6#6: *3 open() "/index.html" failed (2: No such file or directory), client: 172.22.0.1, server: localhost, request: "GET /index.html HTTP/1.1", host: "localhost"
+2019/07/14 15:04:27 [error] 6#6: *3 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /mobile HTTP/1.1", host: "oc.com"
+2019/07/14 15:04:27 [error] 6#6: *4 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/mobile"
+2019/07/14 15:05:11 [error] 6#6: *1 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /mobile HTTP/1.1", host: "oc.com"
+2019/07/14 15:05:11 [error] 6#6: *2 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/mobile"
+2019/07/14 15:05:12 [error] 6#6: *3 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /mobile HTTP/1.1", host: "oc.com"
+2019/07/14 15:05:12 [error] 9#9: *4 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/mobile"
+2019/07/14 15:05:33 [error] 8#8: *1 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /mobile HTTP/1.1", host: "oc.com"
+2019/07/14 15:05:33 [error] 8#8: *2 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/mobile"
+2019/07/14 15:05:34 [error] 8#8: *3 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /mobile HTTP/1.1", host: "oc.com"
+2019/07/14 15:05:34 [error] 8#8: *4 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/mobile"
+2019/07/14 15:06:42 [error] 8#8: *5 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /mobile HTTP/1.1", host: "oc.com"
+2019/07/14 15:06:42 [error] 8#8: *6 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/mobile"
+2019/07/14 15:06:42 [error] 8#8: *7 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /mobile HTTP/1.1", host: "oc.com"
+2019/07/14 15:06:42 [error] 8#8: *8 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/mobile"
+2019/07/14 15:07:05 [error] 8#8: *9 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET / HTTP/1.1", host: "oc.com"
+2019/07/14 15:07:05 [error] 8#8: *10 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/"
+2019/07/14 15:08:35 [error] 6#6: *1 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET / HTTP/1.1", host: "oc.com"
+2019/07/14 15:08:35 [error] 6#6: *2 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/"
+2019/07/14 15:09:25 [error] 6#6: *1 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET / HTTP/1.1", host: "oc.com"
+2019/07/14 15:09:25 [error] 6#6: *2 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/"
+2019/07/14 15:09:26 [error] 6#6: *3 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET / HTTP/1.1", host: "oc.com"
+2019/07/14 15:09:26 [error] 7#7: *4 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/"
+2019/07/14 15:09:38 [error] 6#6: *1 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET / HTTP/1.1", host: "oc.com"
+2019/07/14 15:09:38 [error] 6#6: *2 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/"
+2019/07/14 15:09:39 [error] 6#6: *4 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET / HTTP/1.1", host: "oc.com"
+2019/07/14 15:09:39 [error] 6#6: *3 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/"
+2019/07/14 15:09:39 [error] 6#6: *5 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET / HTTP/1.1", host: "oc.com"
+2019/07/14 15:09:39 [error] 6#6: *6 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/"
+2019/07/14 15:09:40 [error] 6#6: *7 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET / HTTP/1.1", host: "oc.com"
+2019/07/14 15:09:40 [error] 9#9: *8 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/"
+2019/07/14 15:09:42 [error] 6#6: *10 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET / HTTP/1.1", host: "oc.com"
+2019/07/14 15:09:42 [error] 6#6: *9 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/"
+2019/07/15 02:07:16 [error] 8#8: *4 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Cannot use 'Object' as class name as it is reserved in /var/www/capital/vendor/yiisoft/yii2/base/Object.php on line 77" while reading response header from upstream, client: 172.22.0.1, server: localhost, request: "GET /capital/backend/web/ HTTP/1.1", upstream: "fastcgi://172.22.0.6:9000", host: "localhost"
+2019/07/15 02:07:35 [error] 8#8: *9 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /mobile HTTP/1.1", host: "oc.com"
+2019/07/15 02:07:35 [error] 8#8: *10 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/mobile"
+2019/07/15 02:07:38 [error] 8#8: *11 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET / HTTP/1.1", host: "oc.com"
+2019/07/15 02:07:38 [error] 8#8: *12 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/"
+2019/07/15 02:08:01 [error] 9#9: *13 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /index.php HTTP/1.1", host: "oc.com"
+2019/07/15 02:08:01 [error] 9#9: *14 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/index.php"
+2019/07/15 02:09:11 [error] 8#8: *15 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /index.php HTTP/1.1", host: "oc.com"
+2019/07/15 02:09:11 [error] 8#8: *16 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/index.php"
+2019/07/15 02:09:11 [error] 8#8: *17 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /index.php HTTP/1.1", host: "oc.com"
+2019/07/15 02:09:11 [error] 8#8: *18 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/index.php"
+2019/07/15 02:09:12 [error] 8#8: *19 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /index.php HTTP/1.1", host: "oc.com"
+2019/07/15 02:09:12 [error] 8#8: *20 rewrite or internal redirection cycle while processing "/index.php", client: 172.22.0.1, server: oc.com, request: "GET /favicon.ico HTTP/1.1", host: "oc.com", referrer: "http://oc.com/index.php"

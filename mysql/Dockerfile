@@ -1,6 +1,6 @@
-FROM mysql:5.6
+FROM mysql:5.7
 
-ARG MYSQL_VERSION=5.6
+ARG MYSQL_VERSION=5.7
 
 MAINTAINER Mahmoud Zalt <mahmoud@zalt.me>
 
