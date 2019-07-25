@@ -1,0 +1,53 @@
+FROM php:fpm-alpine
+
+RUN sed -i 's/dl-cdn.alpinelinux.org/mirrors.aliyun.com/g' /etc/apk/repositories
+
+RUN apk --no-cache update && \
+    apk --no-cache upgrade && \
+    apk --no-cache add \
+    curl-dev \
+    freetype-dev \
+    libjpeg-turbo-dev \
+    libpng-dev \
+    libxml2-dev \
+    zlib-dev \
+    libzip-dev\
+    pcre-dev \
+    g++ \
+    make \
+    autoconf \
+    nodejs-npm \
+  && docker-php-ext-install \
+    curl \
+    mbstring \
+    bcmath\
+    pdo \
+    pdo_mysql \
+    zip \
+    opcache \
+  && docker-php-ext-configure gd \
+    --with-freetype-dir=/usr/include/ \
+    --with-jpeg-dir=/usr/include/ \
+    --with-png-dir=/usr/include/ \
+  && docker-php-ext-install gd \
+  && curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin --filename=composer \
+  && chmod +x /usr/local/bin/composer \
+  && rm -rf /var/cache/apk/*
+
+
+# 修改 composer 为国内镜像
+RUN composer config -g repo.packagist composer https://packagist.laravel-china.org
+
+# install prestissimo
+# RUN composer global require "hirak/prestissimo"
+
+COPY ./xdebug.ini /usr/local/etc/php/conf.d/xdebug.ini
+
+# Copy aerospike configration for remote debugging
+COPY ./aerospike.ini /usr/local/etc/php/conf.d/aerospike.ini
+
+WORKDIR /var/www
+
+CMD ["php-fpm"]
+
+EXPOSE 9000
