@@ -117,76 +117,6 @@ services:
       - memcached
     networks:
       - backend
-  ### PHP-FPM72 Container #######################################
-
-  #  php-fpm:
-  #    build:
-  #      context: php-fpm
-  #      args:
-  #        - LARADOCK_PHP_VERSION=${PHP_VERSION}
-  #        - INSTALL_XDEBUG=${PHP_FPM_INSTALL_XDEBUG}
-  #        - INSTALL_PHPDBG=${PHP_FPM_INSTALL_PHPDBG}
-  #        - INSTALL_SSH2=${PHP_FPM_INSTALL_SSH2}
-  #        - INSTALL_SOAP=${PHP_FPM_INSTALL_SOAP}
-  #        - INSTALL_XSL=${PHP_FPM_INSTALL_XSL}
-  #        - INSTALL_IMAP=${PHP_FPM_INSTALL_IMAP}
-  #        - INSTALL_MONGO=${PHP_FPM_INSTALL_MONGO}
-  #        - INSTALL_AMQP=${PHP_FPM_INSTALL_AMQP}
-  #        - INSTALL_MSSQL=${PHP_FPM_INSTALL_MSSQL}
-  #        - INSTALL_BCMATH=${PHP_FPM_INSTALL_BCMATH}
-  #        - INSTALL_GMP=${PHP_FPM_INSTALL_GMP}
-  #        - INSTALL_PHPREDIS=${PHP_FPM_INSTALL_PHPREDIS}
-  #        - INSTALL_MEMCACHED=${PHP_FPM_INSTALL_MEMCACHED}
-  #        - INSTALL_OPCACHE=${PHP_FPM_INSTALL_OPCACHE}
-  #        - INSTALL_EXIF=${PHP_FPM_INSTALL_EXIF}
-  #        - INSTALL_AEROSPIKE=${PHP_FPM_INSTALL_AEROSPIKE}
-  #        - INSTALL_MYSQLI=${PHP_FPM_INSTALL_MYSQLI}
-  #        - INSTALL_PGSQL=${PHP_FPM_INSTALL_PGSQL}
-  #        - INSTALL_PG_CLIENT=${PHP_FPM_INSTALL_PG_CLIENT}
-  #        - INSTALL_POSTGIS=${PHP_FPM_INSTALL_POSTGIS}
-  #        - INSTALL_INTL=${PHP_FPM_INSTALL_INTL}
-  #        - INSTALL_GHOSTSCRIPT=${PHP_FPM_INSTALL_GHOSTSCRIPT}
-  #        - INSTALL_LDAP=${PHP_FPM_INSTALL_LDAP}
-  #        - INSTALL_PHALCON=${PHP_FPM_INSTALL_PHALCON}
-  #        - INSTALL_SWOOLE=${PHP_FPM_INSTALL_SWOOLE}
-  #        - INSTALL_TAINT=${PHP_FPM_INSTALL_TAINT}
-  #        - INSTALL_IMAGE_OPTIMIZERS=${PHP_FPM_INSTALL_IMAGE_OPTIMIZERS}
-  #        - INSTALL_IMAGEMAGICK=${PHP_FPM_INSTALL_IMAGEMAGICK}
-  #        - INSTALL_CALENDAR=${PHP_FPM_INSTALL_CALENDAR}
-  #        - INSTALL_FAKETIME=${PHP_FPM_INSTALL_FAKETIME}
-  #        - INSTALL_IONCUBE=${PHP_FPM_INSTALL_IONCUBE}
-  #        - INSTALL_APCU=${PHP_FPM_INSTALL_APCU}
-  #        - INSTALL_YAML=${PHP_FPM_INSTALL_YAML}
-  #        - INSTALL_RDKAFKA=${PHP_FPM_INSTALL_RDKAFKA}
-  #        - INSTALL_ADDITIONAL_LOCALES=${PHP_FPM_INSTALL_ADDITIONAL_LOCALES}
-  #        - INSTALL_MYSQL_CLIENT=${PHP_FPM_INSTALL_MYSQL_CLIENT}
-  #        - INSTALL_PING=${PHP_FPM_INSTALL_PING}
-  #        - INSTALL_SSHPASS=${PHP_FPM_INSTALL_SSHPASS}
-  #        - ADDITIONAL_LOCALES=${PHP_FPM_ADDITIONAL_LOCALES}
-  #        - INSTALL_FFMPEG=${PHP_FPM_FFMPEG}
-  #        - http_proxy
-  #        - https_proxy
-  #        - no_proxy
-  #    volumes:
-  #      - ./php-fpm/php${PHP_VERSION}.ini:/usr/local/etc/php/php.ini
-  #    #          - ${APP_CODE_PATH_HOST}:${APP_CODE_PATH_CONTAINER}${APP_CODE_CONTAINER_FLAG}
-  #    expose:
-  #      - "9000"
-  #    extra_hosts:
-  #      - "dockerhost:${DOCKER_HOST_IP}"
-  #    environment:
-  #      - PHP_IDE_CONFIG=${PHP_IDE_CONFIG}
-  #      - DOCKER_HOST=tcp://docker-in-docker:2375
-  #      - FAKETIME=${PHP_FPM_FAKETIME}
-  #    depends_on:
-  #      - mysql
-  #      - memcached
-  #    networks:
-  #      - backend
-  #        links:
-  #          - docker-in-docker
-  ### NGINX Server Container ##################################
-
   nginx:
     build:
       context: ./nginx
@@ -221,20 +151,20 @@ services:
 
   ### RabbitMQ Container ######################################
 
-  #  rabbitmq:
-  #    build: ./rabbitmq
-  #    ports:
-  #      - "${RABBITMQ_NODE_HOST_PORT}:5672"
-  #      - "${RABBITMQ_MANAGEMENT_HTTP_HOST_PORT}:15672"
-  #      - "${RABBITMQ_MANAGEMENT_HTTPS_HOST_PORT}:15671"
-  #    privileged: true
-  #    environment:
-  #      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
-  #      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
-  #    depends_on:
-  #      - php-fpm
-  #    networks:
-  #      - backend
+  rabbitmq:
+    build: ./rabbitmq
+    ports:
+      - "${RABBITMQ_NODE_HOST_PORT}:5672"
+      - "${RABBITMQ_MANAGEMENT_HTTP_HOST_PORT}:15672"
+      - "${RABBITMQ_MANAGEMENT_HTTPS_HOST_PORT}:15671"
+    privileged: true
+    environment:
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+    depends_on:
+      - php-fpm
+    networks:
+      - backend
 
   ### MongoDB Container #######################################
 
@@ -267,5 +197,5 @@ volumes:
     driver: "local"
   redis:
     driver: "local"
-#  mongo:
-#    driver: "local"
+  mongo:
+    driver: "local"
